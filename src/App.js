@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 export default function App() {
   const [trains, settrains] = useState([]);
-  const headers = { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYzMjQ5OTMsImNvbXBhbnlOYW1lIjoiR1RCSVQgQ2VudHJhbCIsImNsaWVudElEIjoiYTIwNmZiNzktZmU0Yy00NDFhLWEwOGUtMGQ0Y2FlZGUwYTBlIiwib3duZXJOYW1lIjoiIiwib3duZXJFbWFpbCI6IiIsInJvbGxObyI6IjA5NTEzMjAyNzIwIn0.l-ShEQ9UsH1Usrbt75obXL_0yTbnAqFvcFresoM3nQ4' }
+  const headers = { 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODYzMjU4MzQsImNvbXBhbnlOYW1lIjoiR1RCSVQgQ2VudHJhbCIsImNsaWVudElEIjoiYTIwNmZiNzktZmU0Yy00NDFhLWEwOGUtMGQ0Y2FlZGUwYTBlIiwib3duZXJOYW1lIjoiIiwib3duZXJFbWFpbCI6IiIsInJvbGxObyI6IjA5NTEzMjAyNzIwIn0.TmmQEXsMIdKYKn3DojGTf26yfHLXGZwXSo5nx-ZUWg0' }
 
   useEffect(() => {
 
@@ -21,9 +21,9 @@ export default function App() {
       {trains.map((item) => (
         <>
         <h2>{item.trainName}</h2>
-        <p>{item.trainNumber}</p>
-          <p>{item.departureTime.Hours}:{item.departureTime.Minutes}:{item.departureTime.Seconds}</p>
-        <p>{item.seatsAvailable.sleeper}:{item.seatsAvailable.AC}</p>
+        <p>Train Number : {item.trainNumber}</p>
+          <p>Departure Time : {item.departureTime.Hours}:{item.departureTime.Minutes}:{item.departureTime.Seconds}</p>
+        <p>Seats Available : Sleeper : {item.seatsAvailable.sleeper}, AC : {item.seatsAvailable.AC}</p>
         </>
       ))}
       
